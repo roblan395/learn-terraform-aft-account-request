@@ -1,14 +1,14 @@
 # main.tf
-module "sandbox_1" {
+module "sandbox_3" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "rlanda+afttest4@morrisopazo.com"
-    AccountName               = "sandbox-aft4"
+    AccountEmail              = "sebastianleonardo299+aft@gmail.com"
+    AccountName               = "sandbox-ST"
     ManagedOrganizationalUnit = "Learn AFT"
-    SSOUserEmail              = "rlanda+afttest4@morrisopazo.com"
-    SSOUserFirstName          = "Sandbox4" 
-    SSOUserLastName           = "AFT4"
+    SSOUserEmail              = "sebastianleonardo299+aft@gmail.com"
+    SSOUserFirstName          = "Sandbox5" 
+    SSOUserLastName           = "AFT5"
   }
 
   account_tags = {
@@ -24,16 +24,16 @@ module "sandbox_1" {
   account_customizations_name = "sandbox"
 }
 
-module "sandbox_2" {
+module "sandbox_4" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "rlanda+afttest5@morrisopazo.com"
-    AccountName               = "sandbox-aft5"
+    AccountEmail              = "ifcatalan98+aft@gmail.com"
+    AccountName               = "sandbox-IC"
     ManagedOrganizationalUnit = "Learn AFT"
-    SSOUserEmail              = "rlanda+afttest5@morrisopazo.com"
-    SSOUserFirstName          = "Sandbox5" 
-    SSOUserLastName           = "AFT5"
+    SSOUserEmail              = "ifcatalan98+aft@gmail.com"
+    SSOUserFirstName          = "Sandbox6" 
+    SSOUserLastName           = "AFT6"
   }
 
   account_tags = {
