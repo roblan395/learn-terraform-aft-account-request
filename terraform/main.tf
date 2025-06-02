@@ -2,16 +2,16 @@ module "test_account" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "rlanda+wp123@morrisopazo.com"
+    AccountEmail              = "stibaquira+wp@morris-labs.com"
     AccountName               = "test-account123"
     ManagedOrganizationalUnit = "Learn AFT"
-    SSOUserEmail              = "rlanda+wp123@morrisopazo.com"
-    SSOUserFirstName          = "Test"
+    SSOUserEmail              = "stibaquira+wp@morris-labs.com"
+    SSOUserFirstName          = "ST"
     SSOUserLastName           = "User"
   }
 
   account_tags = {
-    "Environment" = "Test",
+    "Environment" = "Sandbox",
     "Owner"       = "rlanda"
   }
 
@@ -20,5 +20,5 @@ module "test_account" {
     change_reason       = "Test account with custom resources"
   }
 
-  account_customizations_name = "test"
+  account_customizations_name = "sandbox"
 }
