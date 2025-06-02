@@ -1,51 +1,24 @@
-module "sandbox1" {
+module "test_account" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "rlanda+1@morrisopazo.com"
-    AccountName               = "sandbox-aft1"
+    AccountEmail              = "rlanda+wp123@morrisopazo.com"
+    AccountName               = "test-account123"
     ManagedOrganizationalUnit = "Learn AFT"
-    SSOUserEmail              = "rlanda+wp@morrisopazo.com"
-    SSOUserFirstName          = "RL1"
-    SSOUserLastName           = "AFT"
-   }
+    SSOUserEmail              = "rlanda+wp123@morrisopazo.com"
+    SSOUserFirstName          = "Test"
+    SSOUserLastName           = "User"
+  }
 
   account_tags = {
-    "Learn Tutorial" = "AFT",
-    "Environment"    = "Sandbox"
+    "Environment" = "Test",
+    "Owner"       = "rlanda"
   }
 
   change_management_parameters = {
     change_requested_by = "HashiCorp Learn"
-    change_reason       = "Batch account creation 1/2"
+    change_reason       = "Test account with custom resources"
   }
 
-  account_customizations_name = "sandbox"
-}
-
-module "sandbox2" {
-  source = "./modules/aft-account-request"
-
-  control_tower_parameters = {
-    AccountEmail              = "sebastianleonardo299+aft03@gmail.com"
-    AccountName               = "sandbox-ST03"
-    ManagedOrganizationalUnit = "Learn AFT"
-    SSOUserEmail              = "sebastianleonardo299+aft@gmail.com"
-    SSOUserFirstName          = "Sandbox8" 
-    SSOUserLastName           = "AFT8"
-  }
-
-  account_tags = {
-    "Learn Tutorial" = "AFT",
-    "Environment"    = "Sandbox",
-    "Owner"          = "Team-DevOps"
-  }
-
-  change_management_parameters = {
-    change_requested_by = "HashiCorp Learn"
-    change_reason       = "Batch account creation 2/2"
-  }
-
-  account_customizations_name = "sandbox"
-
+  account_customizations_name = "test"
 }
