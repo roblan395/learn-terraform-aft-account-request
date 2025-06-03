@@ -2,11 +2,11 @@ module "dormant_account" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "rlanda+otp1@morrisopazo.com"  # Email real
-    AccountName               = "lab-otp1",
+    AccountEmail              = "temp-admin2@yourdomain.com"  # Email real
+    AccountName               = "lab-otp2",
     ManagedOrganizationalUnit = "Workshop Serverless DE",
     # Usa valores temporales (no vacíos)
-    SSOUserEmail              = "temp-admin@yourdomain.com",  # Temporal
+    SSOUserEmail              = "temp-admin2@yourdomain.com",  # Temporal
     SSOUserFirstName          = "Temp",
     SSOUserLastName           = "Admin"
   }
