@@ -2,25 +2,24 @@ module "dormant_account" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "rlanda-de1@morrisopazo.com"
-    AccountName               = "lab-account-2"
-    ManagedOrganizationalUnit = "Workshop Serverless DE"
-    # Deja estos campos vacíos para evitar SSO automático
-    SSOUserEmail              = ""
-    SSOUserFirstName          = ""
-    SSOUserLastName           = ""
+    AccountEmail              = "rlanda+otp1@morrisopazo.com"  # Email real
+    AccountName               = "lab-otp1",
+    ManagedOrganizationalUnit = "Workshop Serverless DE",
+    # Usa valores temporales (no vacíos)
+    SSOUserEmail              = "temp-admin@yourdomain.com",  # Temporal
+    SSOUserFirstName          = "Temp",
+    SSOUserLastName           = "Admin"
   }
 
   account_tags = {
     "Environment"    = "Dormant",
-    "Owner"          = "rlanda",
-    "AccountStatus"  = "PendingActivation",  # Importante para el filtrado
+    "AccountStatus"  = "PendingOTP",  # Tag clave para filtrar
     "ActivationType" = "OTP"
   }
 
   change_management_parameters = {
-    change_requested_by = "OTP Activation System",
-    change_reason       = "Dormant account for OTP activation"
+    change_requested_by = "OTP System",
+    change_reason       = "Cuenta dormida para activación por OTP"
   }
 
   account_customizations_name = "sandbox"
